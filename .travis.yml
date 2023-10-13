@@ -21,3 +21,5 @@ script:
   - black --check .
   - flake8 .
   - coverage run polls/tests.py
+
+after_success: coveralls
