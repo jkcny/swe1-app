@@ -11,6 +11,8 @@ install:
   - pip install coveralls
 
 before script:
+  - sudo apt-get update
+  - sudo apt-get upgrade sqlite3
   - python manage.py makemigrations
   - python manage.py migrate
   - black .
