@@ -29,8 +29,8 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   region: "us-west-2"
-  app: "swe1-app"
-  env: "swe1-app-python-env"
+  app: "swe1-app-py39"
+  env: "swe1-app-py39-env"
   bucket_name: "elastic-beanstalk-test-swe1"
   on:
     branch: main
