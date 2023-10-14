@@ -11,16 +11,16 @@ install:
   - pip install coveralls
   - pip install urllib3==1.26.6
 
-before script:
+before_script:
   - sudo apt update
   - sudo apt upgrade sqlite3
   - python manage.py makemigrations
   - python manage.py migrate
-  - black .
 
 script:
   - black --check .
   - flake8 .
   - coverage run manage.py test polls
 
-after_success: coveralls
+after_script: 
+  - coveralls
